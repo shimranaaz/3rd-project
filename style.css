@@ -1,0 +1,1239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lobster Two", sans-serif;
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+}
+.logo-text:hover{
+    color: #c85103;
+}
+.logo-text {
+    color: white;
+}
+
+.hamburger-icon {
+    border: none;
+    background-color: transparent;
+}
+
+.hamburger-icon .fa-bars,
+.hamburger-icon .fa-x {
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.hamburger-icon input[type="checkbox"] {
+    appearance: none;
+}
+
+.navigation {
+    display: flex;
+    gap: 30px;
+}
+.navigation a:hover{
+    color: #c85103;
+}
+.navigation a {
+    color: white;
+    text-decoration: none;
+}
+@media screen and (max-width: 850px) {
+    header {
+        display: block;
+    }
+
+    .navigation {
+        height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .logo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hamburger-icon {
+        display: block;
+    }
+
+    .fa-x {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+        margin-top: 1rem;
+        height: 225px;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+        display: none;
+    }
+
+    header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+        display: inline-block;
+    }
+}
+@keyframes slidy {
+    0% {
+        left: 0%;
+    }
+
+    20% {
+        left: 0%;
+    }
+
+    25% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    45% {
+        left: -100%;
+    }
+
+    50% {
+        left: -200%;
+    }
+
+    70% {
+        left: -200%;
+    }
+
+    75% {
+        left: -300%;
+    }
+
+    95% {
+        left: -300%;
+    }
+
+    100% {
+        left: -400%;
+    }
+}
+
+div#slider {
+    overflow: hidden;
+}
+
+div#slider figure img {
+    width: 20%;
+    height: 100vh;
+    float: left;
+    margin-bottom: 50px;
+}
+
+div#slider figure {
+    position: relative;
+    top: 30px;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    text-align: left;
+    font-size: 0;
+    animation: 20s slidy infinite;
+}
+
+.container h1 {
+    font-size: 70px;
+    text-align: center;
+}
+
+.container h2 {
+    color: #c85103;
+    font-size: 70px;
+    text-align: center;
+}
+
+.first {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 3em;
+    margin: auto;
+    width: 70%;
+}
+.aboutus img{
+    width: 45em;
+    border: 2px solid black;
+    height: 60vh;
+}
+.aboutus{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+}
+.one{
+display: flex;
+width: 100%;
+justify-content: center;
+gap: 10px;
+}
+.three{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    }
+.about{
+    position: relative;
+}
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% ,-50%);
+}
+.circle img{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 21em;
+    height: 21em;
+}
+.text1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-vector{
+    width: 146px;
+}
+.content-vector img {
+    width: 80%;
+    height: 120px;
+}
+
+.content-vector span {
+    color: #c85103;
+    font-size: 23px;
+}
+
+.content h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c85103;
+}
+.text {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+.row img {
+    width: 20%;
+    height: 40vh;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.row img:hover {
+    transform: scale(1.09);
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+.about h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c85103;
+}
+
+.about h6 {
+    font-size: 23px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about span {
+    font-size: 23px;
+    color: #c85103;
+    text-align: center;
+}
+
+.about p {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.button a:hover {
+    color: white;
+    background-color: #000;
+}
+
+.button a {
+    text-decoration: none;
+    padding: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #c85103;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.button {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.kids h1 {
+    font-size: 70px;
+    text-align: center;
+    color: #c85103;
+    margin-bottom: 40px;
+}
+
+.shoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.shoes img {
+    width: 20%;
+    height: 40vh;
+    border-radius: 20px;
+    transition: transform 1s;
+}
+
+.shoes img:hover {
+    transform: scale(0.9);
+    cursor: zoom-out;
+}
+
+.mens h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c85103;
+}
+
+.shoes1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.shoes1 img {
+    width: 20%;
+    height: 40vh;
+    border-radius: 20px;
+}
+
+.shoes1 img:hover {
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.women h1 {
+    font-size: 70px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #c85103;
+}
+
+.shoes2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.shoes2 img {
+    width: 20%;
+    height: 40vh;
+    border-radius: 50%;
+    transform: rotate(360deg);
+
+}
+
+.shoes2 img:hover {
+    transition: .3s;
+    border-radius: 20px;
+}
+
+.slippers h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c85103;
+}
+
+.shoes3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 50px;
+    gap: 20px;
+}
+
+.shoes3 img {
+    width: 20%;
+    height: 40vh;
+    border-radius: 20px;
+    transition: .3s;
+}
+
+.shoes3 img:hover {
+    transform: rotate(360deg);
+    border-radius: 50%;
+
+}
+
+.costumers h1 {
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #c85103;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cards {
+    width: 23%;
+    height: 60vh;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px #c85103;
+    padding: 50px;
+    margin-bottom: 50px;
+    transition: 0.3s;
+}
+
+.cards:hover {
+    transform: scale(1.09);
+}
+
+.card-icon img {
+    width: 7em;
+    height: 18vh;
+}
+
+.cards h2 {
+    font-size: 14px;
+    text-align: center;
+
+}
+
+.cards p {
+    font-size: 20px;
+    color: #c85103;
+    font-weight: bold;
+    text-align: center;
+}
+
+.cards span {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.view a:hover {
+    color: white;
+    background-color: #000;
+}
+
+.view a {
+    text-decoration: none;
+    padding: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    text-align: center;
+    background-color: #c85103;
+    margin-bottom: 50px;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+}
+
+.view {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.follow h5 {
+    font-size: 70px;
+    text-align: center;
+    color: #c85103;
+}
+
+.follow p {
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.video1 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.video1 video {
+    width: 20%;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px gray;
+    margin-bottom: 50px;
+}
+
+.container1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.container1 {
+    width: 100%;
+    height: auto;
+    padding: 2em;
+    background-color: white;
+    box-shadow: 10px 10px 30px gray;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+.container1 h5 {
+    font-size: 50px;
+    color: #c85103;
+}
+
+.container1 a:hover {
+    color: #c85103;
+}
+
+.container1 a {
+    color: #000;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.container1 ul li {
+    list-style: none;
+}
+
+.Information h4 {
+    font-size: 50px;
+    color: #c85103;
+}
+
+.socialmedia h3 {
+    font-size: 50px;
+    color: #c85103;
+}
+
+.socialmedia i:hover {
+    color: #c85103;
+}
+
+.socialmedia i {
+    margin: 10px;
+}
+@media only screen and (max-width:1199px){
+    .shoes img{
+       width: 20em;
+       height: 17em;
+    }
+    .row img{
+        width: 20em;
+       height: 17em;
+    }
+    .shoes1 img{
+        width: 20em;
+       height: 17em;
+    }
+    .shoes2 img{
+        width: 20em;
+       height: 17em;
+    }
+    .shoes3 img{
+        width: 20em;
+       height: 17em;
+    }
+    .cards{
+        width: 40%;
+    }
+    .cards h2{
+        font-size: 17px;
+    }
+    .video1 video{
+        height: 40vh;
+        width: 25%;
+    }
+    .container1{
+        height: auto;
+    }
+}
+@media only screen and (max-width:1024px){
+    div#slider figure img {
+        height: 75vh;
+    }
+    .aboutus img{
+        width: 25em;
+        height: 30vh;
+    }
+    .circle img{
+        width: 10em;
+        height: 13vh;
+    }
+}
+@media only screen and (max-width:912px){
+    div#slider figure img {
+        height: 50vh;
+    }
+}
+@media only screen and (max-width:800px){
+    div#slider figure img {
+        height: 60vh;
+    }
+}
+@media only screen and (max-width:768px){
+    .aboutus img{
+        width: 19em;
+        height: 25vh;
+    }
+    .circle img{
+        width: 8em;
+        height: 13vh;
+    }
+}
+@media only screen and (max-width:767px){
+    .cards{
+        width: 28%;
+        height: 55vh;
+    }
+    .about h6{
+        font-size: 20px;
+    }
+    .about p{
+        font-size: 22px;
+    }
+    .container1 h5{
+        font-size: 45px;
+    }
+    .Information h4{
+        font-size: 45px;
+    }
+    .socialmedia h3{
+        font-size: 45px;
+    }
+    .video1 video{
+        width: 28%;
+    }
+    .card-icon i{
+        font-size: 100px;
+    }
+    .container1{
+        height: auto;
+    }
+}
+@media only screen and (max-width:633px){
+    .container1 a{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:638px){
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .container1 a{
+        font-size: 20px;
+    }
+    .container1 h5{
+        font-size: 30px;
+    }
+    .Information h4{
+        font-size: 30px;
+    }
+    .socialmedia h3{
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width:600px){
+    .about p{
+        font-size: 22px;
+    }
+    .container1 h5{
+        font-size: 35px;
+    }
+    .Information h4{
+        font-size: 35px;
+    }
+    .socialmedia h3{
+        font-size: 35px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .container1{
+        gap: 30px;
+    }
+    .container1 a{
+        font-size: 23px;
+    }
+}
+@media only screen and (max-width:531px){
+    .container1 a{
+        font-size: 18px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .about p{
+        font-size: 18px;
+    }
+    .container1 h5{
+        font-size: 30px;
+    }
+   .socialmedia i{
+    font-size: 17px;
+   }
+   .video1 video{
+    width: 25%;
+    height: 40vh;
+   }
+  .cards{
+    width: 29%;
+    height: 47vh;
+  }
+  .cards h2{
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width:533px){
+    .cards{
+        width: 29%;
+        height: 47vh;
+      }
+      .card-icon i{
+        font-size: 70px;
+      }
+      .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:520px){
+    .socialmedia i{
+        font-size: 15px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:513px){
+    .socialmedia i{
+        font-size: 14px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:590px){
+    .container1 a{
+        font-size: 18px;
+    }
+    .about p{
+        font-size: 18px;
+    }
+    .container1 h5{
+        font-size: 30px;
+    }
+    .cards{
+        width: 29%;
+        height: 47vh;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:500px){
+    .container1 a{
+        font-size: 18px;
+    }
+    .about p{
+        font-size: 18px;
+    }
+    .container1 h5{
+        font-size: 30px;
+    }
+   .socialmedia i{
+    font-size: 20px;
+   }
+   .video1 video{
+    width: 25%;
+    height: 40vh;
+   }
+  .cards{
+    width: 29%;
+    height: 43vh;
+  }
+  .cards h2{
+    font-size: 12px;
+  }
+  .row img{
+    height: 30vh;
+  }
+  .shoes img{
+    height: 30vh;
+  }
+  .shoes1 img{
+    height: 30vh;
+  }
+  .shoes2 img{
+    height: 30vh;
+  }
+  .shoes3 img{
+    height: 30vh;
+  }
+  .cards p{
+    font-size: 19px;
+  }
+  .cards span{
+    font-size: 17px;
+  }
+  .container1{
+    height: auto;
+   justify-content: flex-start;
+   flex-direction: column;
+    align-items: flex-start;
+}
+}
+@media only screen and (max-width:555px){
+    .cards{
+        width: 29%;
+        height: 47vh;
+    }
+    .cards h2{
+        font-size: 13px;
+    }
+    .row img{
+        height: 30vh;
+        width: 15em;
+    }
+    .shoes img{
+        height: 30vh;
+        width: 15em;
+    }
+    .shoes1 img{
+        height: 30vh;
+        width: 15em;
+    }
+    .shoes2 img{
+        height: 30vh;
+        width: 15em;
+    }
+    .shoes3 img{
+        height: 30vh;
+        width: 15em;
+    }
+    .video1 video{
+        height: 30vh;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:580px){
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:497px){
+    .container1 h5{
+        font-size: 30px;
+    }
+    .Information h4{
+        font-size: 30px;
+    }
+    .socialmedia h3{
+        font-size: 30px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:448px){
+    .container1 h5{
+        font-size: 25px;
+    }
+    .Information h4{
+        font-size: 25px;
+    }
+    .socialmedia h3{
+        font-size: 25px;
+    }
+    .costumers h1{
+        font-size: 45px;
+    }
+    .logo-text{
+        font-size: 30px;
+    }
+    .container h1{
+        font-size: 50px;
+    }
+    .container h2{
+        font-size: 50px;
+    }
+    .content h1{
+        font-size: 50px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .follow p{
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width:461px){
+    .cards{
+        height: 50vh;
+        width: 30%;
+    }
+    .cards h2{
+        font-size: 12px;
+    }
+    .container1{
+        height: auto;
+        flex-direction: flex-start;
+        align-items: flex-start;
+    }
+}
+@media only screen and (max-width:450px){
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+.video1{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.video1 video{
+    height: 20em;
+    width: 70%;
+}
+.cards{
+    width: 60%;
+}
+.flex-box{
+    gap: 1px;
+}
+div#slider figure img {
+    height: 86vh;
+}
+.shoes{
+    flex-direction: column;
+}
+.image{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.row img{
+    height: 45vh;
+    width: 70%;
+}
+.about h1{
+    font-size: 50px;
+}
+.about h6{
+    font-size: 15px;
+}
+.about p{
+    font-size: 15px;
+}
+.kids h1{
+    font-size: 50px;
+}
+.shoes img{
+    height: 45vh;
+    width: 70%; 
+}
+.mens h1{
+    font-size: 50px;
+}
+.shoes1{
+    flex-direction: column;
+}
+.shoes1 img{
+    height: 45vh;
+    width: 70%;  
+}
+.women h1{
+    font-size: 50px;
+}
+.shoes2{
+    flex-direction: column;
+}
+.shoes2 img{
+    height: 45vh;
+    width: 70%;
+}
+.slippers h1{
+    font-size: 50px;
+}
+.shoes3{
+    flex-direction: column;
+}
+.shoes3 img{
+    height: 45vh;
+    width: 70%;
+}
+.follow h5{
+    font-size: 50px;
+}
+.container1 h5{
+    font-size: 40px;
+}
+.Information h4{
+    font-size: 40px;
+}
+.socialmedia h3{
+    font-size: 40px;
+}
+div#slider figure img {
+    height: 60vh;
+}
+.aboutus img{
+    width: 10em;
+    height: 20vh;
+}
+.circle img{
+    width: 5em;
+    height: 13vh;
+}
+}
+@media only screen and (max-width:375px){
+    .costumers h1{
+        font-size: 50px;
+    }
+    .logo-text{
+        font-size: 30px;
+    }
+    .container h1{
+        font-size: 50px;
+    }
+    .container h2{
+        font-size: 50px;
+    }
+    .content h1{
+        font-size: 50px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+    .aboutus img{
+        width: 10em;
+        height: 20vh;
+    }
+    .circle img{
+        width: 5em;
+        height: 13vh;
+    }
+    .first{
+        width: 100%;
+        padding: 1em;
+        row-gap: 20px;
+    }
+    .content-vector{
+        width: 40%;
+    }
+}
+@media only screen and (max-width:350px){
+    div#slider figure img {
+        height: 60vh;
+    }
+    .shoes{
+        flex-direction: column;
+    }
+    .container h1{
+        font-size: 50px;
+    }
+    .container h2{
+        font-size: 50px;
+    }
+    .content h1{
+        font-size: 50px;
+    }
+    .image{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .row img{
+        height: 45vh;
+        width: 70%;
+    }
+    .about h1{
+        font-size: 50px;
+    }
+    .about h6{
+        font-size: 16px;
+    }
+    .about p{
+        font-size: 17px;
+    }
+    .kids h1{
+        font-size: 50px;
+    }
+    .shoes img{
+        height: 45vh;
+        width: 70%; 
+    }
+    .mens h1{
+        font-size: 50px;
+    }
+    .shoes1{
+        flex-direction: column;
+    }
+    .shoes1 img{
+        height: 45vh;
+        width: 70%;  
+    }
+    .women h1{
+        font-size: 50px;
+    }
+    .shoes2{
+        flex-direction: column;
+    }
+    .shoes2 img{
+        height: 45vh;
+        width: 70%;
+    }
+    .slippers h1{
+        font-size: 50px;
+    }
+    .shoes3{
+        flex-direction: column;
+    }
+    .shoes3 img{
+        height: 45vh;
+        width: 70%;
+    }
+    .follow h5{
+        font-size: 50px;
+    }
+    .container1 h5{
+        font-size: 40px;
+    }
+    .Information h4{
+        font-size: 40px;
+    }
+    .socialmedia h3{
+        font-size: 40px;
+    }
+    .container1{
+        height: auto;
+       justify-content: flex-start;
+       flex-direction: column;
+        align-items: flex-start;
+    }
+}

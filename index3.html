@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Womens Shoes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Lobster Two", sans-serif;
+        }
+        .hamburger-icon {
+            display: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: black;
+        }
+
+        .logo-text:hover {
+            color: #c85103;
+        }
+
+        .logo-text {
+            color: white;
+        }
+
+        .hamburger-icon {
+            border: none;
+            background-color: transparent;
+        }
+
+        .hamburger-icon .fa-bars,
+        .hamburger-icon .fa-x {
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        .hamburger-icon input[type="checkbox"] {
+            appearance: none;
+        }
+
+        .navigation {
+            display: flex;
+            gap: 30px;
+        }
+
+        .navigation a:hover {
+            color: #c85103;
+        }
+
+        .navigation a {
+            color: white;
+            text-decoration: none;
+        }
+
+
+        .hero {
+            width: 100%;
+            height: 100vh;
+            background-image: url(pinterest2.jpg);
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 7em;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .content h1:hover {
+            transform: scale(1.09);
+            color: #c85103;
+        }
+
+        .content a:hover {
+            background-color: white;
+            color: #000;
+        }
+
+        .content a {
+            text-decoration: none;
+            color: white;
+            font-size: 24px;
+            border: 2px solid white;
+            padding: 14px 70px;
+            border-radius: 50px;
+        }
+
+        .offer h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 70px;
+            color: #c85103;
+        }
+
+        .image {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .image img {
+            width: 30%;
+            height: 60vh;
+            border-radius: 20px;
+            box-shadow: 10px 10px 20px gray;
+            filter: grayscale(.4);
+            transition: .3s;
+        }
+
+        .image img:hover {
+            filter: grayscale(0);
+            transform: scale(1.1) rotate(7deg);
+
+        }
+
+        .kids h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 70px;
+            color: #c85103;
+        }
+
+        .shoes {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+            gap: 70px;
+        }
+
+        .womens-shoes {
+            background-image: url(womenshoes1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 350px;
+            margin: 0 15px;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes:hover {
+            box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.7)inset;
+        }
+
+        .womens-shoes h4,
+        h3 {
+            margin-bottom: 0;
+            line-height: 2em;
+            padding-top: 80px;
+            text-align: center;
+            color: #fff;
+            font-size: 35px;
+            transition: all 0.5s ease-in-out 0s;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .womens-shoes h3 {
+            margin-top: 5px;
+            line-height: 2em;
+            padding-top: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .womens-shoes:hover h4,
+        .womens-shoes:hover h3 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes p i {
+            margin: 0 5px;
+            line-height: 2em;
+            font-size: 25px;
+            color: #fff;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes:hover p i {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes span {
+            margin: 0 5px;
+            line-height: 2em;
+            font-size: 25px;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: black;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+            line-height: 80px;
+        }
+
+        .womens-shoes:hover span {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes1 {
+            background-image: url(womenshoes2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 350px;
+            margin: 0 15px;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes1:hover {
+            box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.7)inset;
+        }
+
+        .womens-shoes1 h4,
+        h3 {
+            margin-bottom: 0;
+            line-height: 2em;
+            padding-top: 80px;
+            text-align: center;
+            color: #fff;
+            font-size: 35px;
+            transition: all 0.5s ease-in-out 0s;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .womens-shoes1 h3 {
+            margin-top: 5px;
+            line-height: 2em;
+            padding-top: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .womens-shoes1:hover h4,
+        .womens-shoes1:hover h3 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes1 p i {
+            margin: 0 5px;
+            line-height: 2em;
+            font-size: 25px;
+            color: #fff;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes1:hover p i {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes1 span {
+            margin: 0 5px;
+            line-height: 2em;
+            font-size: 25px;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: black;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+            line-height: 80px;
+        }
+
+        .womens-shoes1:hover span {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes2 {
+            background-image: url(womenshoes3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 350px;
+            margin: 0 15px;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes2:hover {
+            box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.7)inset;
+        }
+
+        .womens-shoes2 h4,
+        h3 {
+            margin-bottom: 0;
+            line-height: 2em;
+            padding-top: 80px;
+            text-align: center;
+            color: #fff;
+            font-size: 35px;
+            transition: all 0.5s ease-in-out 0s;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .womens-shoes2 h3 {
+            margin-top: 5px;
+            line-height: 2em;
+            padding-top: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .womens-shoes2:hover h4,
+        .womens-shoes2:hover h3 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes2 p i {
+            margin: 0 5px;
+            line-height: 2em;
+            font-size: 25px;
+            color: #fff;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes2:hover p i {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes2 span {
+            margin: 0 5px;
+            font-size: 25px;
+            line-height: 2em;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: black;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+            line-height: 80px;
+        }
+
+        .womens-shoes2:hover span {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes3 {
+            background-image: url(womenshoes4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 350px;
+            margin: 0 15px;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes3:hover {
+            box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.7)inset;
+        }
+
+        .womens-shoes3 h4,
+        h3 {
+            margin-bottom: 0;
+            padding-top: 80px;
+            line-height: 2em;
+            text-align: center;
+            color: #fff;
+            font-size: 35px;
+            transition: all 0.5s ease-in-out 0s;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .womens-shoes3 h3 {
+            margin-top: 5px;
+            line-height: 2em;
+            padding-top: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .womens-shoes3:hover h4,
+        .womens-shoes3:hover h3 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes3 p i {
+            margin: 0 5px;
+            font-size: 25px;
+            line-height: 2em;
+            color: #fff;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes3:hover p i {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes3 span {
+            margin: 0 5px;
+            font-size: 25px;
+            line-height: 2em;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: black;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+            line-height: 80px;
+        }
+
+        .womens-shoes3:hover span {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes4 {
+            background-image: url(womenshoe5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 350px;
+            margin: 0 15px;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes4:hover {
+            box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.7)inset;
+        }
+
+        .womens-shoes4 h4,
+        h3 {
+            margin-bottom: 0;
+            line-height: 2em;
+            padding-top: 80px;
+            text-align: center;
+            color: #fff;
+            font-size: 35px;
+            transition: all 0.5s ease-in-out 0s;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .womens-shoes4 h3 {
+            margin-top: 5px;
+            line-height: 2em;
+            padding-top: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .womens-shoes4:hover h4,
+        .womens-shoes4:hover h3 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes4 p i {
+            margin: 0 5px;
+            line-height: 2em;
+            font-size: 25px;
+            color: #fff;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes4:hover p i {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes4 span {
+            margin: 0 5px;
+            font-size: 25px;
+            line-height: 2em;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: black;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+            line-height: 80px;
+        }
+
+        .womens-shoes4:hover span {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes5 {
+            background-image: url(womenshoe6.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 400px;
+            width: 350px;
+            margin: 0 15px;
+            float: left;
+            text-align: center;
+            border-radius: 20px;
+            border: 2px solid black;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes5:hover {
+            box-shadow: 0 0 0 200px rgba(0, 0, 0, 0.7)inset;
+        }
+
+        .womens-shoes5 h4,
+        h3 {
+            margin-bottom: 0;
+            line-height: 2em;
+            padding-top: 80px;
+            text-align: center;
+            color: #fff;
+            font-size: 35px;
+            transition: all 0.5s ease-in-out 0s;
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        .womens-shoes5 h3 {
+            margin-top: 5px;
+            line-height: 2em;
+            padding-top: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .womens-shoes5:hover h4,
+        .womens-shoes5:hover h3 {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes5 p i {
+            margin: 0 5px;
+            font-size: 25px;
+            color: #fff;
+            opacity: 0;
+            line-height: 2em;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .womens-shoes5:hover p i {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .womens-shoes5 span {
+            margin: 0 5px;
+            font-size: 25px;
+            line-height: 2em;
+            padding: 8px;
+            border: 2px solid white;
+            border-radius: 30px;
+            background-color: #fff;
+            padding-left: 20px;
+            padding-right: 20px;
+            color: black;
+            opacity: 0;
+            transform: scale(0);
+            transition: all 0.5s ease-in-out 0s;
+            line-height: 80px;
+        }
+
+        .womens-shoes5:hover span {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .collection h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 70px;
+            color: #c85103;
+        }
+
+        .collection span {
+            font-size: 23px;
+            color: #c85103;
+            text-align: center;
+        }
+
+        .collection h6 {
+            font-size: 23px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .collection p {
+            font-size: 23px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .button a:hover {
+            color: white;
+            background-color: #000;
+        }
+
+        .button a {
+            text-decoration: none;
+            padding: 7px;
+            padding-left: 30px;
+            padding-right: 30px;
+            text-align: center;
+            background-color: #c85103;
+            margin-bottom: 50px;
+            border-radius: 20px;
+            color: white;
+            font-size: 20px;
+        }
+
+        .button {
+           text-align: center;
+        }
+
+        .class h4 {
+            text-align: center;
+            font-size: 70px;
+            margin-bottom: 30px;
+            color: #c85103;
+        }
+
+        .container1 {
+            width: 100%;
+            height: auto;
+           padding: 2em;
+            background-color: black;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .container1 h2 {
+            font-size: 50px;
+            color: #c85103;
+        }
+
+        .text1 {
+            display: flex;
+            color: #fff;
+            gap: 20px;
+            flex-direction: column;
+        }
+        .text1 p:hover{
+            color: #c85103;
+        }
+       .text1 p{
+        font-size: 20px;
+        line-height: 36px;
+       }
+        .shop {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        .shop li {
+            list-style: none;
+            padding-bottom: 10px;
+
+        }
+        .shop a:hover{
+            color: #c85103;
+        }
+        .shop a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+        }
+
+        .shop1 h5 {
+            font-size: 50px;
+            color: #c85103;
+        }
+
+        .shop1 input {
+            padding: 10px 15px;
+            text-align: center;
+            border: none;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+        .shop1 button:hover{
+            background-color: #c85103;
+            color: #fff;
+        }
+        .shop1 button {
+            padding: 4px 15px;
+            font-size: 20px;
+            text-align: center;
+            background-color: white;
+            border: 2px solid white;
+            border-radius: 20px;
+        }
+        .btn2{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .social h4{
+            font-size: 50px;
+            color: #c85103;
+        }
+        .social i:hover{
+            color: #c85103;
+        }
+        .social i{
+            color: #fff;
+        }
+        .icon{
+            display: flex;
+            flex-direction: row;
+            line-height: 3em;
+            font-size: 30px;
+            gap: 50px;
+        }
+        @media only screen and (max-width:1199px){
+            .image img{
+                height: 35vh;
+                width: 19em;
+            }
+            .container1{
+                height: auto;
+            }
+        }
+        @media only screen and (max-width:1024px){
+            .hero{
+                height: 60vh;
+            }
+            .container1{
+                height: auto;
+            }
+        }
+        @media only screen and (max-width:768px){
+            .image img{
+                height: 35vh;
+                width: 19em;
+        }
+        .womens-shoes{
+            width: 19em;
+            height: 20em;
+        }
+        .womens-shoes1{
+            width: 19em;
+            height: 20em;
+        }
+        .womens-shoes2{
+            width: 19em;
+            height: 20em;
+        }
+        .womens-shoes3{
+            width: 19em;
+            height: 20em;
+        }
+        .womens-shoes4{
+            width: 19em;
+            height: 20em;
+        }
+        .womens-shoes5{
+            width: 19em;
+            height: 20em;
+        }
+        .hero{
+            height: 65vh;
+        }
+        .collection h6{
+            font-size: 17px;
+        }
+        .container1{
+                height: auto;
+            }
+    }
+
+@media only screen and (max-width:767px){
+    .collection p{
+        font-size: 20px;
+    }
+    .womens-shoes{
+        width: 20em;
+        height: 20em;
+    }
+    .womens-shoes1{
+        width: 20em;
+        height: 20em;
+    }
+    .womens-shoes2{
+        width: 20em;
+        height: 20em;
+    }
+    .womens-shoes3{
+        width: 20em;
+        height: 20em;
+    }
+    .womens-shoes4{
+        width: 20em;
+        height: 20em;
+    }
+    .womens-shoes5{
+        width: 20em;
+        height: 20em;
+    }
+    .hero{
+            height: 65vh;
+        }
+        .container1{
+                height: auto;
+            }
+}
+@media only screen and (max-width:720px){
+    .womens-shoes{
+        width: 18em;
+        height: 18em;
+    }
+    .womens-shoes1{
+        width: 18em;
+        height: 18em;
+    }
+    .womens-shoes2{
+        width: 18em;
+        height: 18em;
+    }
+    .womens-shoes3{
+        width: 18em;
+        height: 18em;
+    }
+    .womens-shoes4{
+        width: 18em;
+        height: 18em;
+    }
+    .womens-shoes5{
+        width: 18em;
+        height: 18em;
+    }
+    .container1{
+                height: auto;
+            }
+}
+@media only screen and (max-width:660px){
+    .womens-shoes{
+        width: 16em;
+        height: 16em;
+    }
+    .womens-shoes1{
+        width: 16em;
+        height: 16em;
+    }
+    .womens-shoes2{
+        width: 16em;
+        height: 16em;
+    }
+    .womens-shoes3{
+        width: 16em;
+        height: 16em;
+    }
+    .womens-shoes4{
+        width: 16em;
+        height: 16em;
+    }
+    .womens-shoes5{
+        width: 16em;
+        height: 16em;
+    }
+    .hero{
+            height: 65vh;
+        }
+        .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+@media only screen and (max-width:650px){
+    .hero{
+            height: 65vh;
+        }
+        .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+@media only screen and (max-width:590px){
+    .womens-shoes{
+        width: 15em;
+        height: 15em;
+    }
+    .womens-shoes1{
+        width: 15em;
+        height: 15em;
+    }
+    .womens-shoes2{
+        width: 15em;
+        height: 15em;
+    }
+    .womens-shoes3{
+        width: 15em;
+        height: 15em;
+    }
+    .womens-shoes4{
+        width: 15em;
+        height: 15em;
+    }
+    .womens-shoes5{
+        width: 15em;
+        height: 15em;
+    }
+    .text1 p{
+        text-align: center;
+    }
+    .container1 h2{
+        text-align: center;
+    }
+    .womens-shoes h4{
+        font-size: 18px;
+    }
+    .womens-shoes h3{
+        font-size: 16px;
+    }
+    .womens-shoes p{
+        font-size: 20px;
+    }
+    .womens-shoes span{
+        font-size: 18px;
+    }
+    .womens-shoes1 h4{
+        font-size: 18px;
+    }
+    .womens-shoes1 h3{
+        font-size: 16px;
+    }
+    .womens-shoes1 p{
+        font-size: 20px;
+    }
+    .womens-shoes1 span{
+        font-size: 18px;
+    }
+    .womens-shoes2 h4{
+        font-size: 18px;
+    }
+    .womens-shoes2 h3{
+        font-size: 16px;
+    }
+    .womens-shoes2 p{
+        font-size: 20px;
+    }
+    .womens-shoes2 span{
+        font-size: 18px;
+    }
+    .womens-shoes3 h4{
+        font-size: 18px;
+    }
+    .womens-shoes3 h3{
+        font-size: 16px;
+    }
+    .womens-shoes3 p{
+        font-size: 20px;
+    }
+    .womens-shoes3 span{
+        font-size: 18px;
+    }
+    .womens-shoes4 h4{
+        font-size: 18px;
+    }
+    .womens-shoes4 h3{
+        font-size: 16px;
+    }
+    .womens-shoes4 p{
+        font-size: 20px;
+    }
+    .womens-shoes4 span{
+        font-size: 18px;
+    }
+    .womens-shoes5 h4{
+        font-size: 18px;
+    }
+    .womens-shoes5 h3{
+        font-size: 16px;
+    }
+    .womens-shoes5 p{
+        font-size: 20px;
+    }
+    .womens-shoes5 span{
+        font-size: 18px;
+    }
+    .hero{
+            height: 65vh;
+        }
+        .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+@media only screen and (max-width:540px){
+    .womens-shoes{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes1{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes2{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes3{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes4{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes5{
+        width: 13em;
+        height: 13em;
+    }
+    .text1 p{
+        text-align: center;
+    }
+    .container1 h2{
+        text-align: center;
+    }
+    .class h4{
+        font-size: 40px;
+    }
+    .content h1{
+        font-size: 95px;
+    }
+    .content a{
+        padding: 12px 50px;
+    }
+    .image img{
+        width: 37%;
+        height: 40vh;
+    }
+    .womens-shoes h4{
+        font-size: 16px;
+    }
+    .womens-shoes h3{
+        font-size: 14px;
+    }
+    .womens-shoes p{
+        font-size: 18px;
+    }
+    .womens-shoes span{
+        font-size: 13px;
+    }
+    .womens-shoes1 h4{
+        font-size: 16px;
+    }
+    .womens-shoes1 h3{
+        font-size: 14px;
+    }
+    .womens-shoes1 p{
+        font-size: 18px;
+    }
+    .womens-shoes1 span{
+        font-size: 13px;
+    }
+    .womens-shoes2 h4{
+        font-size: 16px;
+    }
+    .womens-shoes2 h3{
+        font-size: 16px;
+    }
+    .womens-shoes2 p{
+        font-size: 18px;
+    }
+    .womens-shoes2 span{
+        font-size: 16px;
+    }
+    .womens-shoes3 h4{
+        font-size: 16px;
+    }
+    .womens-shoes3 h3{
+        font-size: 14px;
+    }
+    .womens-shoes3 p{
+        font-size: 18px;
+    }
+    .womens-shoes3 span{
+        font-size: 13px;
+    }
+    .womens-shoes4 h4{
+        font-size: 16px;
+    }
+    .womens-shoes4 h3{
+        font-size: 14px;
+    }
+    .womens-shoes4 p{
+        font-size: 18px;
+    }
+    .womens-shoes4 span{
+        font-size: 13px;
+    }
+    .womens-shoes5 h4{
+        font-size: 16px;
+    }
+    .womens-shoes5 h3{
+        font-size: 14px;
+    }
+    .womens-shoes5 p{
+        font-size: 18px;
+    }
+    .womens-shoes5 span{
+        font-size: 13px;
+    }
+    .btn2{
+        flex-direction: row;
+        justify-content: center;
+    }
+    .icon{
+        justify-content: center;
+    }
+    .hero{
+            height: 65vh;
+        }
+        .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+@media only screen and (max-width:560px){
+    .womens-shoes{
+        width: 17em;
+        height: 17em;
+    }
+    .womens-shoes1{
+        width: 17em;
+        height: 17em;
+    }
+    .womens-shoes2{
+        width: 17em;
+        height: 17em;
+    }
+    .womens-shoes3{
+        width: 17em;
+        height: 17em;
+    }
+    .womens-shoes4{
+        width: 17em;
+        height: 17em;
+    }
+    .womens-shoes5{
+        width: 17em;
+        height: 17em;
+    }
+    .text1 p{
+        text-align: center;
+    }
+    .container1 h2{
+        text-align: center;
+    }
+    .class h4{
+        font-size: 40px;
+    }
+    .content h1{
+        font-size: 95px;
+    }
+    .content a{
+        padding: 12px 50px;
+    }
+    .image img{
+        width: 37%;
+        height: 40vh;
+    }
+    .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+@media only screen and (max-width:530px){
+    .womens-shoes{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes1{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes2{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes3{
+        width: 13em;
+        height: 13em;
+    }
+    .womens-shoes4{
+        width: 13em;
+        height: 13em;
+    }
+    .mens-shoes5{
+        width: 13em;
+        height: 13em;
+    }
+    .text1 p{
+        text-align: center;
+    }
+    .container1 h2{
+        text-align: center;
+    }
+    .class h4{
+        font-size: 40px;
+    }
+    .content h1{
+        font-size: 95px;
+    }
+    .content a{
+        padding: 12px 50px;
+    }
+    .image img{
+        width: 37%;
+        height: 40vh;
+    }
+    .womens-shoes h4{
+        font-size: 16px;
+    }
+    .womens-shoes h3{
+        font-size: 14px;
+    }
+    .womens-shoes p{
+        font-size: 18px;
+    }
+    .womens-shoes span{
+        font-size: 13px;
+    }
+    .womens-shoes1 h4{
+        font-size: 16px;
+    }
+    .womens-shoes1 h3{
+        font-size: 14px;
+    }
+    .womens-shoes1 p{
+        font-size: 18px;
+    }
+    .womens-shoes1 span{
+        font-size: 13px;
+    }
+    .womens-shoes2 h4{
+        font-size: 16px;
+    }
+    .womens-shoes2 h3{
+        font-size: 16px;
+    }
+    .womens-shoes2 p{
+        font-size: 18px;
+    }
+    .womens-shoes2 span{
+        font-size: 16px;
+    }
+    .womens-shoes3 h4{
+        font-size: 16px;
+    }
+    .womens-shoes3 h3{
+        font-size: 14px;
+    }
+    .womens-shoes3 p{
+        font-size: 18px;
+    }
+    .womens-shoes3 span{
+        font-size: 13px;
+    }
+    .womens-shoes4 h4{
+        font-size: 16px;
+    }
+    .womens-shoes4 h3{
+        font-size: 14px;
+    }
+    .womens-shoes4 p{
+        font-size: 18px;
+    }
+    .womens-shoes4 span{
+        font-size: 13px;
+    }
+    .womens-shoes5 h4{
+        font-size: 16px;
+    }
+    .womens-shoes5 h3{
+        font-size: 14px;
+    }
+    .womens-shoes5 p{
+        font-size: 18px;
+    }
+    .womens-shoes5 span{
+        font-size: 13px;
+    }
+    .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+@media only screen and (max-width:500px){
+    .womens-shoes{
+        flex-direction: column;
+    }
+    .womens-shoes1{
+        width: 12em;
+        height: 12em;
+    }
+    .womens-shoes2{
+        width: 12em;
+        height: 12em;
+    }
+    .womens-shoes3{
+        width: 12em;
+        height: 12em;
+    }
+    .womens-shoes4{
+        width: 12em;
+        height: 12em;
+    }
+    .womens-shoes5{
+        width: 12em;
+        height: 12em;
+    }
+    .text1 p{
+        text-align: center;
+    }
+    .container1 h2{
+        text-align: center;
+    }
+    .womens-shoes h4{
+        font-size: 16px;
+    }
+    .womens-shoes h3{
+        font-size: 14px;
+    }
+    .womens-shoes p{
+        font-size: 18px;
+    }
+    .womens-shoes span{
+        display: none;
+    }
+    .womens-shoes1 h4{
+        font-size: 16px;
+    }
+    .womens-shoes1 h3{
+        font-size: 14px;
+    }
+    .womens-shoes1 p{
+        font-size: 18px;
+    }
+    .womens-shoes1 span{
+        display: none;
+    }
+    .womens-shoes2 h4{
+        font-size: 16px;
+    }
+    .womens-shoes2 h3{
+        font-size: 14px;
+    }
+    .womens-shoes2 p{
+        font-size: 18px;
+    }
+    .womens-shoes2 span{
+        display: none;
+    }
+    .womens-shoes3 h4{
+        font-size: 16px;
+    }
+    .womens-shoes3 h3{
+        font-size: 14px;
+    }
+    .womens-shoes3 p{
+        font-size: 18px;
+    }
+    .womens-shoes3 span{
+       display: none;
+    }
+    .womens-shoes4 h4{
+        font-size: 16px;
+    }
+    .womens-shoes4 h3{
+        font-size: 14px;
+    }
+    .vmens-shoes4 p{
+        font-size: 18px;
+    }
+    .womens-shoes4 span{
+       display: none;
+    }
+    .womens-shoes5 h4{
+        font-size: 16px;
+    }
+    .womens-shoes5 h3{
+        font-size: 14px;
+    }
+    .womens-shoes5 p{
+        font-size: 18px;
+    }
+    .womens-shoes5 span{
+       display: none;
+    }
+    .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+    }
+    @media only screen and (max-width:470px){
+        .content h1{
+            font-size: 90px;
+        }
+        .hero{
+            width: 29em;
+        }
+        .image img{
+            height: 30vh;
+        }
+        .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+    }
+    @media only screen and (max-width:460px){
+        .womens-shoes{
+        width: 22em;
+        height: 24em;
+        justify-content: center;
+    }
+    .womens-shoes1{
+        width: 22em;
+        height: 24em;
+    }
+    .womens-shoes2{
+        width: 22em;
+        height: 24em;
+    }
+    .womens-shoes3{
+        width: 22em;
+        height: 24em;
+    }
+    .womens-shoes4{
+        width: 22em;
+        height: 24em;
+    }
+    .womens-shoes5{
+        width: 22em;
+        height: 24em;
+    }
+    .image img{
+            height: 30vh;
+        }
+    .text1 p{
+        text-align: center;
+    }
+    .container1 h2{
+        text-align: center;
+    }
+    .womens-shoes h4{
+        font-size: 20px;
+    }
+    .womens-shoes h3{
+        font-size: 18px;
+    }
+    .womens-shoes p{
+        font-size: 22px;
+    }
+    .womens-shoes span{
+        font-size: 20px;
+    }
+    .womens-shoes1 h4{
+        font-size: 20px;
+    }
+    .womens-shoes1 h3{
+        font-size: 18px;
+    }
+    .womens-shoes1 p{
+        font-size: 22px;
+    }
+    .womens-shoes1 span{
+        font-size: 20px;
+    }
+    .womens-shoes2 h4{
+        font-size: 20px;
+    }
+    .womens-shoes2 h3{
+        font-size: 18px;
+    }
+    .womens-shoes2 p{
+        font-size: 22px;
+    }
+    .womens-shoes2 span{
+        font-size: 20px;
+    }
+    .womens-shoes3 h4{
+        font-size: 20px;
+    }
+    .womens-shoes3 h3{
+        font-size: 18px;
+    }
+    .womens-shoes3 p{
+        font-size: 22px;
+    }
+    .womens-shoes3 span{
+        font-size: 20px;
+    }
+    .womens-shoes4 h4{
+        font-size: 20px;
+    }
+    .womens-shoes4 h3{
+        font-size: 18px;
+    }
+    .womens-shoes4 p{
+        font-size: 22px;
+    }
+    .womens-shoes4 span{
+        font-size: 20px;
+    }
+    .collection h1{
+        font-size: 45px;
+    }
+    .class h4{
+        font-size: 30px;
+    }
+    .content h1{
+        font-size: 80px;
+    }
+    .container1 {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+}
+.btn2{
+    flex-direction: row;
+    justify-content: center;
+}
+.icon{
+    justify-content: center;
+}  
+.hero{
+            height: 65vh;
+        }
+}
+@media only screen and (max-width:430px){
+    .full-content{
+        width: 27em;
+    }
+    .hero{
+        width: 27em;
+        line-height: 77px;
+        height: 30em;
+    }
+    .image img{
+            height: 30vh;
+        }
+    .content h1{
+        font-size: 50px;
+    }
+    .content a{
+        padding: 16px 17px;
+    }
+    .offer h1{
+        font-size: 50px;
+    }
+    .kids h1{
+        font-size: 50px;
+    }
+    .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+     }
+@media only screen and (max-width:414px){
+    .full-content{
+        width: 25.7em;
+    }
+    .content h1{
+        font-size: 50px;
+    }
+    .image img{
+            height: 30vh;
+        }
+    .content a{
+        padding: 16px 17px;
+    }
+    .hero{
+        width: 25.7em;
+        line-height: 77px;
+        height: 30em;
+    }
+    .content h4{
+        font-size: 30px;
+    }
+    .offer h1{
+        font-size: 40px;
+    }
+    .kids h1{
+        font-size: 40px;
+    }.container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+    @media only screen and (max-width:400px){
+        .full-content{
+            width: 24.4em;
+        }
+        .image img{
+            height: 30vh;
+        }
+        .hero{
+            width: 24.4em;
+            line-height: 77px;
+            height: 30em;
+        }
+        .class h4{
+            font-size: 25px;
+        }
+        .content h1{
+            font-size: 75px;
+        }
+        .text1 p{
+            font-size: 17px;
+        }
+        .content h1{
+        font-size: 50px;
+    }
+    .content a{
+        padding: 16px 17px;
+    }
+    .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+    }
+    @media only screen and (max-width:370px){
+        .content h1{
+            font-size: 55px;
+        }
+        .full-content{
+            width: 23em;
+        }
+        .image img{
+            height: 30vh;
+        }
+        .hero{
+            width: 23em;
+            line-height: 77px;
+            height: 30em;
+        }
+        .offer h1{
+            font-size: 50px;
+        }
+        .collection p{
+            font-size: 17px;
+        }
+        .collection h6{
+            font-size: 20px;
+        }
+        .content h1{
+        font-size: 50px;
+    }
+    .content a{
+        padding: 16px 17px;
+    }
+    .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+    }
+    @media only screen and (max-width:375px){
+        .hero{
+            width: 23.5em;
+            line-height: 77px;
+            height: 30em;
+        }
+        .image img{
+            height: 30vh;
+        }
+        .full-content{
+            width: 23.5em;
+        }
+        .content h1{
+            font-size: 50px;
+        }
+        .offer h1{
+            font-size: 50px;
+        }
+        .kids h1{
+            font-size: 50px;
+        }
+        .collection h1{
+            font-size: 40px;
+        }
+        .collection h6{
+            font-size: 20px;
+        }
+        .collection p{
+            font-size: 15px;
+        }
+        .container1 h2{
+            font-size: 40px;
+        }
+        .shop1 h5{
+            font-size: 40px;
+        }
+        .social h4{
+      font-size: 40px;
+        }
+        .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+    }
+    @media only screen and (max-width:360px){
+        .hero{
+            width: 22.5em;
+            line-height: 77px;
+            height: 30em;
+        }
+        .full-content{
+            width: 22.5em;
+            height: 10em;
+        }
+        .image img{
+            height: 30vh;
+        }
+        .class h4{
+            font-size: 25px;
+        }
+        .content h1{
+            font-size: 65px;
+        }
+        .collection p{
+            font-size: 18px;
+        }
+        .text1 p{
+            font-size: 17px;
+        }
+        .logo-text{
+            font-size: 20px;
+        }
+        .content h1{
+        font-size: 50px;
+    }
+    .hero{
+            height: 65vh;
+        }
+    .content a{
+        padding: 16px 17px;
+    }
+    .womens-shoes h4{
+        font-size: 30px;
+    }
+    .womens-shoes h3{
+        font-size: 18px;
+    }
+    .womens-shoes p{
+        font-size: 30px;
+    }
+    .womens-shoes span{
+        font-size: 20px;
+    }
+    .womens-shoes1 h4{
+        font-size: 30px;
+    }
+    .womens-shoes1 h3{
+        font-size: 18px;
+    }
+    .womens-shoes1 p{
+        font-size: 30px;
+    }
+    .womens1 span{
+        font-size: 20px;
+    }
+    .womens-shoes2 h4{
+        font-size: 30px;
+    }
+    .womens-shoes2 h3{
+        font-size: 18px;
+    }
+    .womens-shoes2 p{
+        font-size: 30px;
+    }
+    .womens-shoes2 span{
+        font-size: 20px;
+    }
+    .womens-shoes3 h4{
+        font-size: 30px;
+    }
+    .womens-shoes3 h3{
+        font-size: 18px;
+    }
+    .womens-shoes3 p{
+        font-size: 30px;
+    }
+    .womens-shoes3 span{
+        font-size: 20px;
+    }
+    .womens-shoes4 h4{
+        font-size: 30px;
+    }
+    .womens-shoes4 h3{
+        font-size: 18px;
+    }
+    .womens-shoes4 p{
+        font-size: 30px;
+    }
+    .womens-shoes4 span{
+        font-size: 20px;
+    }
+    .container1{
+                height: auto;
+                flex-direction: column;
+                text-align: center;
+            }
+}
+ 
+        @media screen and (max-width: 850px) {
+            header {
+                display: block;
+            }
+
+            .navigation {
+                height: 0;
+                overflow: hidden;
+                flex-direction: column;
+                align-items: center;
+                transition: all 0.5s ease-in-out;
+            }
+
+            .logo {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .hamburger-icon {
+                display: block;
+            }
+
+            .fa-x {
+                display: none;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .navigation {
+                margin-top: 1rem;
+                height: 225px;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+                display: none;
+            }
+
+            header:has(.hamburger-icon input[type="checkbox"]:checked) .fa-x {
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1 class="logo-text">Shoes Corner</h1>
+            <button class="hamburger-icon">
+                <label for="dropdown">
+                    <i class="fa-solid fa-bars"></i>
+                    <i class="fa-solid fa-x"></i>
+                </label>
+                <input type="checkbox" id="dropdown" />
+            </button>
+        </div>
+        <ul class="navigation">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="#about us">ABOUT US</a></li>
+            <li><a href="index1.html">KIDS</a></li>
+            <li><a href="index2.html">MEN</a></li>
+            <li><a href="index3.html">WOMEN</a></li>
+        </ul>
+    </header>
+    <div class="hero">
+        <div class="content">
+            <h1>Shoes Corner</h1>
+            <a href="#">Explore More</a>
+        </div>
+    </div>
+    <div class="offer">
+        <h1>Special Offers!</h1>
+        <div class="image">
+            <img src="gigi.jpg">
+            <img src="gigi hadid.jpg">
+        </div>
+    </div>
+    <div class="kids">
+        <h1>Womens Shoes</h1>
+    </div>
+    <div class="shoes">
+        <div class="womens-shoes">
+            <h4>Sports Shoes</h4>
+            <h3>Exclusive offers!</h3>
+            <p>
+                <a href="https://instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+            </p>
+                <span>$30</span>
+        </div>
+        <div class="womens-shoes1">
+            <h4>Sports Shoes</h4>
+            <h3>Exclusive offers!</h3>
+            <p>
+                <a href="https://instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+            </p>
+                <span>$20</span>
+        </div>
+        <div class="womens-shoes2">
+            <h4>Casual Shoes</h4>
+            <h3>Exclusive offers!</h3>
+            <p>
+                <a href="https://instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+            </p>
+                <span>$40</span>
+        </div>
+        <div class="womens-shoes3">
+            <h4>Designer Shoes</h4>
+            <h3>Exclusive offers!</h3>
+            <p>
+                <a href="https://instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+            </p>
+                <span>$30</span>
+        </div>
+        <div class="womens-shoes4">
+            <h4>Designer Shoes</h4>
+            <h3>Exclusive offers!</h3>
+            <p>
+                <a href="https://instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+            </p>
+                <span>$40</span>
+        </div>
+        <div class="womens-shoes5">
+            <h4>Designer Shoes</h4>
+            <h3>Exclusive offers!</h3>
+            <p>
+                <a href="https://instagram.com" target="_blank"> <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://facebook.com" target="_blank"> <i class="fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com" target="_blank"> <i class="fa-brands fa-twitter"></i></a>
+            </p>
+                <span>$40</span>
+        </div>
+    </div>
+    <div class="collection" id="about us">
+        <h1>TESTIMONIALS</h1>
+        <h6>Welcome to <span>Shoes Corner</span> Your Ultimate Destination for Footwear and Accessories.</h6>
+        <p>At Shoes Corner we take pride in being your go-to destination for all things footwear and accessories.
+            Nestled in the heart of the City, our store is a haven for shoe enthusiasts and fashion-forward individuals
+            alike. From sports shoes that elevate your performance to stylish sneakers that make a statement, we have
+            curated a collection that caters to every taste and lifestyle. </p>
+        <div class="button">
+            <a href="#" class="btn1">Know More</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="full-content">
+            <div class="class">
+                <h4>For More Information Contact Us!</h4>
+            </div>
+            <div class="container1">
+                <div class="text1">
+                    <h2>Contact Us</h2>
+                    <p><i class="fa-solid fa-location-dot"></i>&nbsp;2751 S parker Rd,Aurora,CO 80014 United
+                        States</p>
+                    <p><i class="fa-solid fa-phone"></i>&nbsp;+557343673257 </p>
+                    <p><i class="fa-solid fa-envelope"></i>&nbsp;shoescorner@gmail.com</p>
+                </div>
+                <div class="shop">
+                    <h2>Information</h2>
+                    <ul>
+                        <li class="items"><a href="#about us">About us</a></li>
+                        <li class="items"><a href="#shop by categories">Shop by Categories</a></li>
+                        <li class="items"><a href="#full-content">Our costumer love Us!</a></li>
+                    </ul>
+                </div>
+                <div class="shop1">
+                    <h5>Newsletter</h5>  
+                    <div class="btn2">   
+                    <input type="text" placeholder="Enter your email here!"> 
+                <button type="submit" class="btn">Subscribe</button>
+            </div> 
+        </div>  
+            
+                <div class="social">
+                    <h4>Follow Us!</h4>
+                    <div class="icon">
+                    <a href="https://instagram.com"> <i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com"> <i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com"> <i class="fa-brands fa-twitter"></i></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>
